@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tokyo Weather</title>
+    <style>
+      body {
+        background: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+      h1 {
+        color: #1a64d6;
+        font-size: 34px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+      h2 {
+        font-size: 34px;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        padding: 10px 0;
+        margin: 0 auto;
+        max-width: 400px;
+        border-radius: 10px;
+      }
+      li:hover {
+        background: #fffbef;
+      }
+      button {
+        background: #1a64d6;
+        border: 1px solid #1a64d6;
+        border-radius: 30px;
+        color: white;
+        padding: 20px 25px;
+        font-size: 16px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+        transition: all 200ms ease;
+      }
+      button:hover {
+        background: white;
+        color: #1a64d6;
+        cursor: pointer;
+      }
+      .bold {
+        font-weight: 600;
+      }
+      .day {
+        font-weight: 600;
+        margin: 20px 0;
+        font-size: 20px;
+      }
+      .temperature {
+        font-family: monospace;
+        font-size: 18px;
+        opacity: 0.7;
+        margin: 0 0 20px 0;
+      }
+      .coded-by {
+        font-family: monospace;
+        font-size: 18px;
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      🌤 <br />
+      Currently 21° in Tokyo
+    </h1>
+    <h2>13° / <span class="bold">23°</span></h2>
+    <ul>
+      <li>
+        <div class="day">🌧 Tomorrow</div>
+        <div class="temperature">10° / <span class="bold">22°</span></div>
+      </li>
+      <li>
+        <div class="day">🌥 Saturday</div>
+        <div class="temperature">15° / <span class="bold">17°</span></div>
+      </li>
+      <li>
+        <div class="day">☀️ Sunday</div>
+        <div class="temperature">25° / <span class="bold">28°</span></div>
+      </li>
+    </ul>
+    <button class="change-city">Change city</button>
+    <div class="coded-by"><p>Coded by Melanie Cole</p></div>
+  </body>
+</html>
