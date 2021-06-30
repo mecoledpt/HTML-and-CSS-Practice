@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Open Sans", Arial, Helvetica, sans-serif;
+        background: rgb(252, 252, 245);
+        background: linear-gradient(
+          14deg,
+          rgba(252, 252, 245, 1) 20%,
+          rgb(202, 197, 183) 80%,
+          rgb(177, 169, 153) 100%
+        );
+      }
+      div {
+        display: block;
+        padding: 30px;
+        margin: 30px auto;
+        border-radius: 10px;
+        max-width: 85%;
+        background-color: #fcfcf5;
+        color: #4a0346;
+        border: 1px solid rgb(202, 197, 183);
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.12);
+      }
+      img {
+        max-width: 60%;
+        border-radius: 4px;
+        display: block;
+        margin: 10px auto 30px auto;
+      }
+      h1 {
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+        line-height: 48px;
+      }
+      h2 {
+        display: block;
+        margin: 0px auto;
+        text-align: center;
+        line-height: 36px;
+        color: #4f8a43;
+      }
+      hr {
+        align: center;
+        color: black;
+        size: 5px;
+        max-width: 75%;
+      }
+      ul {
+        list-style: square;
+        color: #4f8a43;
+        margin: 0px 50px 0px 0px;
+      }
+      button {
+        display: block;
+        padding: 20px 20px;
+        margin: 0px auto;
+        color: #fcfcf5;
+        background-color: #4f8a43;
+        line-size: 20px;
+        font-size: 16px;
+        border-radius: 15px;
+        border: 1px solid #4f8a43;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.12);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        color: #4f8a43;
+        background-color: #fcfcf5;
+        cursor: pointer;
+      }
+      p {
+        line-height: 22px;
+        font-size: 16px;
+      }
+      iframe {
+        display: block;
+        margin: 10px auto;
+      }
+      .footnote {
+        font-size: 14px;
+        font-weight: 100;
+        color: #4f8a43;
+        font-family: monospace;
+        display: block;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/011/921/original/Abby-free-kisses.jpg"
+        alt="A photo of Abby holding a stuffed heart that says 'Free Kisses'"
+        class="abby"
+      />
+      <hr />
+      <h1>Hi, my name is Abby!</h1>
+      <h2>I am a Catahoula Leopard Dog</h2>
+      <p>
+        What is a Catahoula Leopard Dog, you ask? Well, we are the state dog
+        breed of Louisiana! Depending on who you ask, we are bred for:
+      </p>
+      <ul>
+        <li>Rounding up livestock in swampland</li>
+        <li>Hunting wild boar</li>
+        <li>Being adorable</li>
+      </ul>
+      <p>
+        Personally, I really enjoy being out in the woods and I
+        <strong>*love*</strong> hunting squirrels and chasing livestock.
+        Unfortunately, the goats I've met don't listen to me telling them where
+        to go.
+      </p>
+      <br />
+      <form
+        action="https://en.wikipedia.org/wiki/Catahoula_Leopard_Dog"
+        target="_blank"
+      >
+        <button type="link"><em>Learn more about Catahoulas</em></button>
+      </form>
+      <br />
+      <p>
+        My mom loves me very much, which means that she gives me the exercise I
+        need every day to stay sane! Sometimes this means that we go on a walk
+        (and she lets me chase rabbits 🐰  at the soccer fields) or we
+        <strong>PLAY!</strong> 😍  I really like playing tug, but unfortunately
+        this means I often put holes in my toys. 🥺  Once my strong teeth put a
+        hole in a toy, my sister rips all the stuffing out. My Grandma sometimes
+        is able to fix my toys and give them back to me, but often they are gone
+        for good. If you find it in your heart, please donate a little bit to my
+        toy fund so that my mom can continue to buy me tough (but fun) toys for
+        me to play with!
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/TmOct57Lavc"
+        title="Youtube Video Player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <br />
+      <!--form action="https://paypal.me/mecoledpt" target="_blank">
+        <button type="link">Donate to Abby's Toy Fund</button>
+      </form-->
+      <button class="donate">Donate to Abby's Toy fund</button>
+      <br />
+      <p>
+        <span class="footnote"
+          >Coded by
+          <a href="mailto:artifactosphere@gmail.com">Melanie Cole</a>
+        </span>
+      </p>
+    </div>
+    <script>
+      function updateHeading(newHeading) {
+        let heading = document.querySelector("h1");
+        heading.innerHTML = newHeading;
+      }
+      let name = prompt("What is your first name?");
+
+      function importantQ() {
+        let likesDogs = prompt("Do you like dogs?");
+        likesDogs = likesDogs.trim().toLowerCase();
+
+        if (likesDogs === "yes" || likesDogs === "absolutely") {
+          updateHeading(`Hi, ${name}, my name is Abby!`);
+        } else {
+          document.write("I am sad 🥺");
+        }
+      }
+      function alertThankYou() {
+        alert("Thank you for your donation!");
+      }
+      let image = document.querySelector("img.abby");
+      image.addEventListener("click", importantQ);
+
+      let contactButton = document.querySelector("button.donate");
+      contactButton.addEventListener("click", alertThankYou);
+    </script>
+  </body>
+</html>
